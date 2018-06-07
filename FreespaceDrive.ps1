@@ -8,7 +8,7 @@ $MailServer = server.domain.Com
 $From = $server@yourcompany.Com
 $To = it@yourpowershell.Com
 $Subject = '$server is low on drive space'
-#Disk Space - Add amnew variable for each drive
+#Disk Space - Add a new variable for each drive
 $C_disk = Get-WmiObject Win32_LogicalDisk -ComputerName remotecomputer -Filter "DeviceID='C:'" |
 Select-Object Size,FreeSpace
 $C_disk.Size
